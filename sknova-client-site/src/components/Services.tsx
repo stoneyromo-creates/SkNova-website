@@ -69,15 +69,26 @@ export default function Services() {
   const { ref, inView } = useInView();
 
   return (
-    <section id="services" className="bg-black py-24 px-6">
-      <div
-        ref={ref}
-        className={`max-w-6xl mx-auto transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-      >
+    <section id="services" className="bg-black py-32 px-6">
+      <div ref={ref} className="max-w-6xl mx-auto">
+
         <div className="text-center mb-16">
-          <p className="text-purple-500 text-sm font-semibold uppercase tracking-widest mb-3">What We Do</p>
-          <h2 className="font-syne font-bold text-4xl md:text-5xl text-white mb-4">Services Built to Scale</h2>
-          <p className="text-gray-400 max-w-xl mx-auto">
+          <p
+            className={`text-purple-500 text-sm font-semibold uppercase tracking-widest mb-3 transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+            style={{ transitionDelay: "0ms" }}
+          >
+            What We Do
+          </p>
+          <h2
+            className={`font-syne font-bold text-4xl md:text-5xl text-white mb-4 transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+            style={{ transitionDelay: "80ms" }}
+          >
+            Services Built to Scale
+          </h2>
+          <p
+            className={`text-gray-400 max-w-xl mx-auto transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+            style={{ transitionDelay: "160ms" }}
+          >
             From concept to launch and beyond — everything you need to dominate online.
           </p>
         </div>
@@ -86,9 +97,10 @@ export default function Services() {
           {services.map((s, i) => (
             <div
               key={i}
-              className="group bg-white/3 hover:bg-white/6 border border-white/8 hover:border-purple-500/30 rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1"
+              className={`group bg-white/[0.03] hover:bg-white/[0.06] border border-white/[0.08] hover:border-purple-500/30 rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_12px_40px_rgba(168,85,247,0.10)] ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
+              style={{ transitionDelay: `${240 + i * 80}ms`, transition: "opacity 0.5s ease, transform 0.5s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease" }}
             >
-              <div className="w-12 h-12 rounded-xl bg-purple-600/15 text-purple-400 flex items-center justify-center mb-5 group-hover:bg-purple-600/25 transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-purple-600/15 text-purple-400 flex items-center justify-center mb-5 group-hover:bg-purple-600/25 group-hover:scale-110 transition-all duration-300">
                 {s.icon}
               </div>
               <h3 className="font-syne font-semibold text-white text-lg mb-2">{s.title}</h3>

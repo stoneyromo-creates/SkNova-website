@@ -83,7 +83,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-gray-600 text-xs">
+        <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-gray-400 text-xs">
           <p>© {year} {BUSINESS.name}. All rights reserved.</p>
           <p>Dallas, TX — Built with precision.</p>
         </div>

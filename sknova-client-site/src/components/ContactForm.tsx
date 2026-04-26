@@ -52,10 +52,10 @@ export default function ContactForm() {
   };
 
   const inputClass =
-    "w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 text-sm focus:outline-none focus:border-purple-500/60 focus:bg-white/8 transition-all duration-200";
+    "w-full bg-white/[0.05] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-purple-500/60 focus:bg-white/[0.08] focus:shadow-[0_0_0_3px_rgba(168,85,247,0.10)] transition-all duration-200";
 
   return (
-    <section id="contact" className="relative bg-black py-24 px-6 overflow-hidden">
+    <section id="contact" className="relative bg-black py-32 px-6 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-purple-700/6 blur-[120px]" />
       </div>
@@ -211,7 +211,7 @@ export default function ContactForm() {
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="w-full bg-purple-600 hover:bg-purple-500 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold py-4 rounded-xl transition-all duration-200 hover:shadow-[0_0_25px_rgba(168,85,247,0.4)] flex items-center justify-center gap-2"
+                  className="w-full bg-purple-600 hover:bg-purple-500 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold py-4 rounded-xl transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] hover:shadow-[0_0_30px_rgba(168,85,247,0.45)] flex items-center justify-center gap-2"
                 >
                   {status === "loading" ? (
                     <>

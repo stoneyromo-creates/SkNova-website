@@ -6,8 +6,8 @@ import { STRIPE } from "@/lib/constants";
 const plans = [
   {
     name: "Deposit",
-    price: "$250",
-    label: "Project Deposit",
+    price: "$20",
+    sub: "to get started",
     description: "Lock in your spot and kick off your project with a design strategy session.",
     href: STRIPE.deposit,
     features: [
@@ -21,8 +21,8 @@ const plans = [
   },
   {
     name: "Full Build",
-    price: "Custom",
-    label: "Complete Website",
+    price: "$280",
+    sub: "final payment",
     description: "A fully custom website designed and built to convert your visitors into customers.",
     href: STRIPE.finalPayment,
     features: [
@@ -39,8 +39,8 @@ const plans = [
   },
   {
     name: "Maintenance",
-    price: "$99",
-    label: "/ month",
+    price: "$40",
+    sub: "/ month",
     description: "Keep your site fast, secure, and up to date without lifting a finger.",
     href: STRIPE.maintenance,
     features: [
@@ -59,48 +59,57 @@ export default function Pricing() {
   const { ref, inView } = useInView();
 
   return (
-    <section id="pricing" className="bg-black py-24 px-6">
-      <div
-        ref={ref}
-        className={`max-w-6xl mx-auto transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-      >
+    <section id="pricing" className="bg-black py-32 px-6">
+      <div ref={ref} className="max-w-6xl mx-auto">
+
+        {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-purple-500 text-sm font-semibold uppercase tracking-widest mb-3">Investment</p>
-          <h2 className="font-syne font-bold text-4xl md:text-5xl text-white mb-4">
+          <p
+            className={`text-purple-500 text-sm font-semibold uppercase tracking-widest mb-3 transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+            style={{ transitionDelay: "0ms" }}
+          >
+            Investment
+          </p>
+          <h2
+            className={`font-syne font-bold text-4xl md:text-5xl text-white mb-4 transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+            style={{ transitionDelay: "80ms" }}
+          >
             Transparent Pricing
           </h2>
-          <p className="text-gray-400 max-w-xl mx-auto">
+          <p
+            className={`text-gray-400 max-w-xl mx-auto transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+            style={{ transitionDelay: "160ms" }}
+          >
             No hidden fees. No surprises. Pick the option that fits where you are right now.
           </p>
         </div>
 
+        {/* Cards */}
         <div className="grid md:grid-cols-3 gap-6 items-start">
           {plans.map((plan, i) => (
             <div
               key={i}
-              className={`relative rounded-2xl p-8 border transition-all duration-300 hover:-translate-y-1 ${
+              className={`relative rounded-2xl p-8 border transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(168,85,247,0.1)] ${
                 plan.highlight
-                  ? "bg-purple-600/10 border-purple-500/50 shadow-[0_0_40px_rgba(168,85,247,0.15)]"
-                  : "bg-white/3 border-white/8 hover:border-purple-500/20"
-              }`}
+                  ? "bg-purple-600/[0.10] border-purple-500/40 shadow-[0_0_50px_rgba(168,85,247,0.12)]"
+                  : "bg-white/[0.03] border-white/[0.08] hover:border-purple-500/20 hover:bg-white/[0.05]"
+              } ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
+              style={{ transitionDelay: `${240 + i * 120}ms` }}
             >
               {plan.highlight && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-purple-600 text-white text-xs font-semibold px-4 py-1.5 rounded-full">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-600 to-violet-600 text-white text-xs font-semibold px-5 py-1.5 rounded-full shadow-[0_4px_15px_rgba(168,85,247,0.4)]">
                   Most Popular
                 </div>
               )}
 
-              <p className="text-purple-400 text-sm font-semibold uppercase tracking-widest mb-3">{plan.name}</p>
-              <div className="flex items-baseline gap-1 mb-1">
-                <span className="font-syne font-bold text-4xl text-white">{plan.price}</span>
-                {plan.label !== "Project Deposit" && plan.label !== "Complete Website" && (
-                  <span className="text-gray-400 text-sm">{plan.label}</span>
-                )}
+              <p className="text-purple-400 text-xs font-semibold uppercase tracking-widest mb-4">{plan.name}</p>
+
+              <div className="flex items-end gap-1.5 mb-1">
+                <span className="font-syne font-bold text-5xl text-white leading-none">{plan.price}</span>
+                <span className="text-gray-500 text-sm mb-1">{plan.sub}</span>
               </div>
-              {(plan.label === "Project Deposit" || plan.label === "Complete Website") && (
-                <p className="text-gray-500 text-xs mb-4">{plan.label}</p>
-              )}
-              <p className="text-gray-400 text-sm leading-relaxed mb-6">{plan.description}</p>
+
+              <p className="text-gray-400 text-sm leading-relaxed mb-7 mt-4">{plan.description}</p>
 
               <ul className="space-y-3 mb-8">
                 {plan.features.map((f, j) => (
@@ -117,10 +126,10 @@ export default function Pricing() {
                 href={plan.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`block text-center font-semibold py-3.5 rounded-full transition-all duration-200 ${
+                className={`block text-center font-semibold py-3.5 rounded-full transition-all duration-200 hover:scale-[1.03] active:scale-[0.97] ${
                   plan.highlight
-                    ? "bg-purple-600 hover:bg-purple-500 text-white hover:shadow-[0_0_25px_rgba(168,85,247,0.4)]"
-                    : "bg-white/8 hover:bg-white/15 text-white border border-white/10"
+                    ? "bg-purple-600 hover:bg-purple-500 text-white hover:shadow-[0_0_30px_rgba(168,85,247,0.5)]"
+                    : "bg-white/[0.07] hover:bg-white/[0.12] text-white border border-white/10 hover:border-white/20"
                 }`}
               >
                 {plan.cta}
@@ -129,9 +138,12 @@ export default function Pricing() {
           ))}
         </div>
 
-        <p className="text-center text-gray-600 text-sm mt-8">
+        <p
+          className={`text-center text-gray-400 text-sm mt-10 transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+          style={{ transitionDelay: "600ms" }}
+        >
           All payments secured by Stripe. Questions?{" "}
-          <a href="#contact" className="text-purple-400 hover:text-purple-300 transition-colors">
+          <a href="#contact" className="text-purple-400 hover:text-purple-300 transition-colors underline-offset-2 hover:underline">
             Contact us first.
           </a>
         </p>

@@ -45,8 +45,7 @@ function BrowserMockup({
 }) {
   return (
     <div className="rounded-xl overflow-hidden border border-white/10 bg-[#0d0d0d]">
-      {/* Browser chrome */}
-      <div className="flex items-center gap-1.5 px-4 py-3 bg-white/5 border-b border-white/8">
+      <div className="flex items-center gap-1.5 px-4 py-3 bg-white/5 border-b border-white/[0.08]">
         <span className="w-2.5 h-2.5 rounded-full bg-red-500/60" />
         <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/60" />
         <span className="w-2.5 h-2.5 rounded-full bg-green-500/60" />
@@ -54,12 +53,11 @@ function BrowserMockup({
           {title.toLowerCase().replace(/\s/g, "")}.com
         </div>
       </div>
-      {/* Screen content */}
       <div className={`relative h-44 bg-gradient-to-br ${gradient} p-5 overflow-hidden`}>
         <div className="w-16 h-2 rounded bg-white/20 mb-3" />
         <div className="w-28 h-1.5 rounded bg-white/10 mb-5" />
         {bars.map((w, i) => (
-          <div key={i} className={`h-1.5 rounded mb-2 bg-white/8 ${w}`} />
+          <div key={i} className={`h-1.5 rounded mb-2 bg-white/[0.08] ${w}`} />
         ))}
         <div className={`absolute bottom-5 left-5 ${accent} text-white text-[10px] font-semibold px-3 py-1.5 rounded-full`}>
           Get a Free Quote
@@ -73,17 +71,26 @@ export default function Portfolio() {
   const { ref, inView } = useInView();
 
   return (
-    <section className="bg-black py-24 px-6">
-      <div
-        ref={ref}
-        className={`max-w-6xl mx-auto transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-      >
+    <section className="bg-black py-32 px-6">
+      <div ref={ref} className="max-w-6xl mx-auto">
+
         <div className="text-center mb-16">
-          <p className="text-purple-500 text-sm font-semibold uppercase tracking-widest mb-3">Our Work</p>
-          <h2 className="font-syne font-bold text-4xl md:text-5xl text-white mb-4">
+          <p
+            className={`text-purple-500 text-sm font-semibold uppercase tracking-widest mb-3 transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+            style={{ transitionDelay: "0ms" }}
+          >
+            Our Work
+          </p>
+          <h2
+            className={`font-syne font-bold text-4xl md:text-5xl text-white mb-4 transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+            style={{ transitionDelay: "80ms" }}
+          >
             Built to Perform
           </h2>
-          <p className="text-gray-400 max-w-xl mx-auto">
+          <p
+            className={`text-gray-400 max-w-xl mx-auto transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+            style={{ transitionDelay: "160ms" }}
+          >
             A sample of the sites we&apos;ve built — each one designed around one goal: growing the client&apos;s business.
           </p>
         </div>
@@ -92,7 +99,8 @@ export default function Portfolio() {
           {projects.map((p, i) => (
             <div
               key={i}
-              className="group bg-white/3 hover:bg-white/5 border border-white/8 hover:border-purple-500/25 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1"
+              className={`group bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.08] hover:border-purple-500/25 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_16px_50px_rgba(168,85,247,0.10)] ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
+              style={{ transitionDelay: `${240 + i * 120}ms`, transition: "opacity 0.5s ease, transform 0.5s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease" }}
             >
               <div className="p-5 pb-0">
                 <BrowserMockup
@@ -110,7 +118,7 @@ export default function Portfolio() {
                   {p.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs text-gray-500 bg-white/5 border border-white/8 rounded-full px-3 py-1"
+                      className="text-xs text-gray-400 bg-white/5 border border-white/[0.08] rounded-full px-3 py-1"
                     >
                       {tag}
                     </span>
@@ -121,13 +129,16 @@ export default function Portfolio() {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div
+          className={`text-center mt-14 transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+          style={{ transitionDelay: "600ms" }}
+        >
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors text-sm"
+            className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-all duration-200 text-sm group"
           >
             Want results like these? Let&apos;s talk
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>
