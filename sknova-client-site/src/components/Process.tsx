@@ -83,7 +83,7 @@ export default function Process() {
         >
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 bg-brand-yellow hover:bg-yellow-400 text-brand-black font-black px-9 py-4 rounded-xl text-lg transition-all duration-150 hover:scale-[1.03] active:scale-[0.97] shadow-[0_0_30px_rgba(255,214,0,0.3)]"
+            className="btn-yellow-gradient inline-flex items-center gap-2 text-brand-black font-black px-9 py-4 rounded-xl text-lg hover:scale-[1.03] active:scale-[0.97] transition-transform duration-150 shadow-[0_0_30px_rgba(250,204,21,0.3)]"
           >
             Let&apos;s Get Started
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

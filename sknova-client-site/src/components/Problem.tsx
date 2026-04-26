@@ -24,7 +24,7 @@ export default function Problem() {
   const { ref, inView } = useInView();
 
   return (
-    <section className="bg-gray-50 border-y border-gray-200 py-20 px-6">
+    <section className="bg-brand-surface border-y border-gray-200 py-20 px-6">
       <div ref={ref} className="max-w-5xl mx-auto">
 
         {/* Header */}
@@ -54,7 +54,7 @@ export default function Problem() {
           {pains.map((p, i) => (
             <div
               key={i}
-              className={`bg-white border border-gray-200 rounded-2xl p-7 shadow-sm hover:shadow-md hover:-translate-y-1 hover:border-brand-red/30 transition-all duration-300 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
+              className={`bg-white border border-gray-200 rounded-2xl p-7 shadow-md hover:shadow-lg hover:-translate-y-1 hover:border-brand-red/30 transition-all duration-300 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
               style={{ transitionDelay: `${240 + i * 100}ms`, transition: "opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease, border-color 0.3s ease" }}
             >
               <div className="text-4xl mb-4">{p.icon}</div>

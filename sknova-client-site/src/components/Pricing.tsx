@@ -62,7 +62,7 @@ export default function Pricing() {
   const { ref, inView } = useInView();
 
   return (
-    <section id="pricing" className="bg-gray-50 border-y border-gray-200 py-24 px-6">
+    <section id="pricing" className="bg-brand-surface border-y border-gray-200 py-24 px-6">
       <div ref={ref} className="max-w-6xl mx-auto">
 
         {/* Header */}
@@ -104,8 +104,8 @@ export default function Pricing() {
               key={i}
               className={`relative bg-white rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${
                 plan.highlight
-                  ? "border-2 border-brand-yellow shadow-[0_4px_40px_rgba(255,214,0,0.2)]"
-                  : "border border-gray-200 hover:border-gray-300 hover:shadow-md"
+                  ? "border-2 border-brand-yellow shadow-[0_4px_40px_rgba(250,204,21,0.22)]"
+                  : "border border-gray-200 shadow-sm hover:border-gray-300 hover:shadow-md"
               } ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
               style={{ transitionDelay: `${320 + i * 120}ms`, transition: "opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease, border-color 0.3s ease" }}
             >
@@ -145,10 +145,10 @@ export default function Pricing() {
                 href={plan.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`block text-center font-black py-4 rounded-xl transition-all duration-150 hover:scale-[1.03] active:scale-[0.97] text-base ${
+                className={`block text-center font-black py-4 rounded-xl transition-transform duration-150 hover:scale-[1.03] active:scale-[0.97] text-base ${
                   plan.highlight
-                    ? "bg-brand-yellow hover:bg-yellow-400 text-brand-black shadow-md shadow-yellow-100"
-                    : "bg-brand-black hover:bg-gray-800 text-white"
+                    ? "btn-yellow-gradient text-brand-black"
+                    : "bg-brand-black hover:bg-gray-800 text-white shadow-sm"
                 }`}
               >
                 {plan.cta}

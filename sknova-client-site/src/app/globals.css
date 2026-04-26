@@ -7,8 +7,19 @@ html {
 }
 
 body {
-  background: #ffffff;
-  color: #111111;
+  background: #F8F9FB;
+  color: #0A0A0A;
+}
+
+@layer components {
+  .btn-yellow-gradient {
+    background: linear-gradient(135deg, #FACC15, #EAB308);
+    box-shadow: 0 4px 14px rgba(234, 179, 8, 0.28);
+  }
+  .btn-yellow-gradient:hover {
+    background: linear-gradient(135deg, #EAB308, #D97706);
+    box-shadow: 0 6px 20px rgba(234, 179, 8, 0.42);
+  }
 }
 
 @layer utilities {

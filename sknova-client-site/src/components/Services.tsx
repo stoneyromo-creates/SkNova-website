@@ -79,7 +79,7 @@ export default function Services() {
           {services.map((s, i) => (
             <div
               key={i}
-              className={`group bg-white border-2 border-gray-200 hover:border-brand-yellow rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,214,0,0.15)] ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
+              className={`group bg-white border-2 border-gray-200 hover:border-brand-yellow rounded-2xl p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(250,204,21,0.18)] ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
               style={{ transitionDelay: `${240 + i * 90}ms`, transition: "opacity 0.5s ease, transform 0.5s ease, border-color 0.3s ease, box-shadow 0.3s ease" }}
             >
               <div className="w-14 h-14 rounded-xl bg-gray-100 group-hover:bg-brand-yellow text-brand-black flex items-center justify-center mb-5 transition-colors duration-300">
@@ -105,7 +105,7 @@ export default function Services() {
           <p className="text-gray-600 text-lg font-medium mb-4">Ready to get more customers?</p>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 bg-brand-yellow hover:bg-yellow-400 text-brand-black font-black px-8 py-4 rounded-xl text-lg shadow-md shadow-yellow-100 transition-all duration-150 hover:scale-[1.03] active:scale-[0.97]"
+            className="btn-yellow-gradient inline-flex items-center gap-2 text-brand-black font-black px-8 py-4 rounded-xl text-lg hover:scale-[1.03] active:scale-[0.97] transition-transform duration-150"
           >
             Start My Website
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

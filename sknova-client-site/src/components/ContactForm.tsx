@@ -52,10 +52,10 @@ export default function ContactForm() {
   };
 
   const inputClass =
-    "w-full bg-white border border-gray-300 rounded-xl px-4 py-3.5 text-brand-black placeholder-gray-400 text-sm focus:outline-none focus:border-brand-yellow focus:shadow-[0_0_0_3px_rgba(255,214,0,0.20)] transition-all duration-200";
+    "w-full bg-white border border-gray-200 rounded-xl px-4 py-3.5 text-brand-black placeholder-gray-400 text-sm focus:outline-none focus:border-brand-yellow focus:shadow-[0_0_0_3px_rgba(250,204,21,0.22)] transition-all duration-200 shadow-sm";
 
   return (
-    <section id="contact" className="bg-gray-50 border-y border-gray-200 py-24 px-6">
+    <section id="contact" className="bg-brand-surface border-y border-gray-200 py-24 px-6">
       <div
         ref={ref}
         className={`max-w-6xl mx-auto transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
@@ -218,7 +218,7 @@ export default function ContactForm() {
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="w-full bg-brand-yellow hover:bg-yellow-400 disabled:opacity-60 disabled:cursor-not-allowed text-brand-black font-black py-4 rounded-xl transition-all duration-150 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 text-base shadow-md shadow-yellow-100"
+                  className="btn-yellow-gradient w-full disabled:opacity-60 disabled:cursor-not-allowed text-brand-black font-black py-4 rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-transform duration-150 flex items-center justify-center gap-2 text-base"
                 >
                   {status === "loading" ? (
                     <>

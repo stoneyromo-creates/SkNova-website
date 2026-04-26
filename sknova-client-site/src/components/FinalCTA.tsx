@@ -6,10 +6,13 @@ export default function FinalCTA() {
   const { ref, inView } = useInView();
 
   return (
-    <section className="bg-brand-yellow py-24 px-6">
+    <section
+      className="py-24 px-6"
+      style={{ background: "linear-gradient(135deg, #FACC15 0%, #EAB308 55%, #D97706 100%)" }}
+    >
       <div ref={ref} className="max-w-3xl mx-auto text-center">
         <p
-          className={`text-brand-black/60 text-sm font-black uppercase tracking-widest mb-4 transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+          className={`text-brand-black/50 text-sm font-black uppercase tracking-widest mb-4 transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
           style={{ transitionDelay: "0ms" }}
         >
           Don&apos;t Wait
@@ -25,7 +28,7 @@ export default function FinalCTA() {
         </h2>
 
         <p
-          className={`text-brand-black/70 text-lg leading-relaxed mb-10 transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+          className={`text-brand-black/65 text-lg leading-relaxed mb-10 transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
           style={{ transitionDelay: "160ms" }}
         >
           Your competitors are online and converting. Let&apos;s get you a site that works — fast.
@@ -37,7 +40,7 @@ export default function FinalCTA() {
         >
           <a
             href="#contact"
-            className="inline-flex items-center justify-center gap-2 bg-brand-black hover:bg-gray-800 text-white font-black px-10 py-4 rounded-xl text-lg transition-all duration-150 hover:scale-[1.03] active:scale-[0.97] shadow-lg"
+            className="inline-flex items-center justify-center gap-2 bg-brand-black hover:bg-gray-800 text-white font-black px-10 py-4 rounded-xl text-lg transition-all duration-150 hover:scale-[1.03] active:scale-[0.97] shadow-lg shadow-black/20"
           >
             Start My Website
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -46,7 +49,7 @@ export default function FinalCTA() {
           </a>
           <a
             href="#pricing"
-            className="inline-flex items-center justify-center gap-2 bg-white/40 hover:bg-white/60 border border-brand-black/20 text-brand-black font-black px-10 py-4 rounded-xl text-lg transition-all duration-150 hover:scale-[1.03] active:scale-[0.97]"
+            className="inline-flex items-center justify-center gap-2 bg-white/40 hover:bg-white/65 border border-brand-black/15 text-brand-black font-black px-10 py-4 rounded-xl text-lg transition-all duration-150 hover:scale-[1.03] active:scale-[0.97]"
           >
             See Pricing
           </a>

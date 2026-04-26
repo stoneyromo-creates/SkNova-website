@@ -23,7 +23,10 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 inset-x-0 z-50">
       {/* Announcement bar */}
-      <div className="bg-brand-yellow text-brand-black text-center text-sm font-bold py-2.5 px-4 tracking-wide">
+      <div
+        className="text-brand-black text-center text-sm font-bold py-2.5 px-4 tracking-wide"
+        style={{ background: "linear-gradient(135deg, #FACC15, #EAB308)" }}
+      >
         ⭐ Dallas-Based &nbsp;·&nbsp; Fast Turnaround &nbsp;·&nbsp; Limited Spots Available
       </div>
 
@@ -41,7 +44,7 @@ export default function Navbar() {
               <a
                 key={l.href}
                 href={l.href}
-                className="text-sm font-semibold text-gray-600 hover:text-brand-black transition-colors duration-150"
+                className="text-sm font-semibold text-gray-600 hover:text-brand-purple transition-colors duration-150"
               >
                 {l.label}
               </a>
@@ -52,13 +55,13 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-4">
             <a
               href={`tel:${BUSINESS.phone}`}
-              className="text-sm font-semibold text-gray-600 hover:text-brand-black transition-colors"
+              className="text-sm font-semibold text-gray-500 hover:text-brand-black transition-colors"
             >
               {BUSINESS.phone}
             </a>
             <a
               href="#contact"
-              className="bg-brand-black text-white font-bold text-sm px-5 py-2.5 rounded-lg hover:bg-gray-800 transition-all duration-150 hover:scale-[1.03] active:scale-[0.97]"
+              className="bg-brand-black text-white font-bold text-sm px-5 py-2.5 rounded-lg hover:bg-gray-800 transition-all duration-150 hover:scale-[1.03] active:scale-[0.97] shadow-sm"
             >
               Book a Call
             </a>
@@ -96,7 +99,7 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="bg-brand-yellow text-brand-black font-black text-center py-3.5 rounded-xl text-base mt-1"
+              className="btn-yellow-gradient text-brand-black font-black text-center py-3.5 rounded-xl text-base mt-1 transition-transform duration-150 active:scale-[0.98]"
             >
               Book a Call
             </a>

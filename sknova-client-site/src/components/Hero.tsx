@@ -11,7 +11,7 @@ export default function Hero() {
         <div
           className="inline-flex items-center gap-2 bg-yellow-50 border border-yellow-200 text-gray-700 text-sm font-semibold px-5 py-2 rounded-full mb-8 animate-fade-in"
         >
-          <span className="w-2 h-2 rounded-full bg-brand-yellow border border-yellow-400" />
+          <span className="w-2 h-2 rounded-full bg-brand-yellow border border-brand-yellow-dark" />
           Taking New Clients — Dallas, TX
         </div>
 
@@ -22,9 +22,9 @@ export default function Hero() {
         >
           Your Website Should Be
           <br />
-          <mark className="bg-brand-yellow text-brand-black not-italic rounded-sm px-2">
+          <span className="bg-gradient-to-r from-brand-yellow via-brand-yellow-dark to-brand-amber bg-clip-text text-transparent">
             Making You Money.
-          </mark>
+          </span>
         </h1>
 
         {/* Subheadline */}
@@ -43,7 +43,7 @@ export default function Hero() {
         >
           <a
             href="#contact"
-            className="inline-flex items-center justify-center gap-2 bg-brand-yellow hover:bg-yellow-400 text-brand-black font-black text-lg px-10 py-4 rounded-xl shadow-lg shadow-yellow-200 transition-all duration-150 hover:scale-[1.03] active:scale-[0.97]"
+            className="btn-yellow-gradient inline-flex items-center justify-center gap-2 text-brand-black font-black text-lg px-10 py-4 rounded-xl hover:scale-[1.03] active:scale-[0.97] transition-transform duration-150"
           >
             Get My Website Built
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -52,7 +52,7 @@ export default function Hero() {
           </a>
           <a
             href="#pricing"
-            className="inline-flex items-center justify-center gap-2 bg-brand-black hover:bg-gray-800 text-white font-bold text-lg px-10 py-4 rounded-xl transition-all duration-150 hover:scale-[1.03] active:scale-[0.97]"
+            className="inline-flex items-center justify-center gap-2 bg-brand-black hover:bg-gray-800 text-white font-bold text-lg px-10 py-4 rounded-xl transition-all duration-150 hover:scale-[1.03] active:scale-[0.97] shadow-md"
           >
             See Pricing
           </a>

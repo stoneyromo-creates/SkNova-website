@@ -10,10 +10,14 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          yellow: "#FFD600",
+          yellow: "#FACC15",
+          "yellow-dark": "#EAB308",
+          amber: "#D97706",
           red: "#FF3B3B",
-          black: "#111111",
+          black: "#0A0A0A",
           dark: "#1C1C1E",
+          purple: "#7C3AED",
+          surface: "#F8F9FB",
         },
       },
       fontFamily: {
