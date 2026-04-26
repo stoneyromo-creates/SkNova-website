@@ -1,26 +1,23 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
-import Solution from "@/components/Solution";
 import Services from "@/components/Services";
-import Portfolio from "@/components/Portfolio";
 import Process from "@/components/Process";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
+import StickyMobileCTA from "@/components/StickyMobileCTA";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <main>
+      <main className="pb-16 md:pb-0">
         <Hero />
         <Problem />
-        <Solution />
         <Services />
-        <Portfolio />
         <Process />
         <Pricing />
         <FAQ />
@@ -28,6 +25,7 @@ export default function Home() {
         <FinalCTA />
       </main>
       <Footer />
+      <StickyMobileCTA />
     </>
   );
 }

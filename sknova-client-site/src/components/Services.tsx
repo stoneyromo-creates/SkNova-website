@@ -5,63 +5,43 @@ import { useInView } from "@/hooks/useInView";
 const services = [
   {
     icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
       </svg>
     ),
-    title: "Custom Website Design",
-    body: "Tailored, pixel-perfect websites built from scratch to match your brand and convert your ideal customers.",
-    tags: ["Design", "Development"],
+    title: "Websites That Generate Leads",
+    body: "A custom site built around your sales process — every page designed to turn visitors into inquiries.",
+    outcome: "More calls & contact form fills",
   },
   {
     icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
-    title: "Landing Page Design",
-    body: "High-converting single-page experiences built to capture leads, sell products, or promote your service.",
-    tags: ["Landing Pages", "CRO"],
+    title: "Landing Pages That Convert Traffic",
+    body: "Send paid traffic or social media visitors to pages built specifically to capture leads and close sales.",
+    outcome: "Higher ROI on ad spend",
   },
   {
     icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
       </svg>
     ),
-    title: "Website Redesign",
-    body: "Transform your outdated or underperforming site into a modern, fast, and conversion-ready experience.",
-    tags: ["Redesign", "Performance"],
+    title: "Redesigns That Fix Low Performance",
+    body: "Already have a site that isn't working? We rebuild it for conversions without losing your SEO or existing traffic.",
+    outcome: "Turn an old site into a sales tool",
   },
   {
     icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
       </svg>
     ),
-    title: "SEO & Content Strategy",
-    body: "On-page SEO foundation, keyword architecture, and content strategy to drive organic traffic.",
-    tags: ["SEO", "Content"],
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-      </svg>
-    ),
-    title: "Mobile Optimization",
-    body: "Ensure your site looks and performs flawlessly on every screen size, from phones to large monitors.",
-    tags: ["Mobile", "Responsive"],
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-      </svg>
-    ),
-    title: "Monthly Maintenance",
-    body: "We keep your site updated, secure, and running smoothly so you never have to think about it.",
-    tags: ["Maintenance", "Support"],
+    title: "Funnels for Booking & Contact",
+    body: "We build and connect booking systems, contact forms, and call-to-action flows that automatically fill your calendar.",
+    outcome: "Booked appointments on autopilot",
   },
 ];
 
@@ -69,54 +49,69 @@ export default function Services() {
   const { ref, inView } = useInView();
 
   return (
-    <section id="services" className="bg-black py-32 px-6">
+    <section id="services" className="bg-white py-24 px-6">
       <div ref={ref} className="max-w-6xl mx-auto">
 
-        <div className="text-center mb-16">
+        <div className="text-center mb-14">
           <p
-            className={`text-purple-500 text-sm font-semibold uppercase tracking-widest mb-3 transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+            className={`text-brand-red text-sm font-black uppercase tracking-widest mb-3 transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
             style={{ transitionDelay: "0ms" }}
           >
-            What We Do
+            What We Build
           </p>
           <h2
-            className={`font-syne font-bold text-4xl md:text-5xl text-white mb-4 transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+            className={`font-syne font-black text-4xl md:text-5xl text-brand-black mb-4 leading-tight transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
             style={{ transitionDelay: "80ms" }}
           >
-            Services Built to Scale
+            Every Service Has One Goal:
+            <br />
+            <span className="bg-brand-yellow px-2 rounded-sm">Get You Customers</span>
           </h2>
           <p
-            className={`text-gray-400 max-w-xl mx-auto transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+            className={`text-lg text-gray-600 max-w-xl mx-auto transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
             style={{ transitionDelay: "160ms" }}
           >
-            From concept to launch and beyond — everything you need to dominate online.
+            We don&apos;t build pretty websites for vanity. We build sites that work.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 gap-6">
           {services.map((s, i) => (
             <div
               key={i}
-              className={`group bg-white/[0.03] hover:bg-white/[0.06] border border-white/[0.08] hover:border-purple-500/30 rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_12px_40px_rgba(168,85,247,0.10)] ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
-              style={{ transitionDelay: `${240 + i * 80}ms`, transition: "opacity 0.5s ease, transform 0.5s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease" }}
+              className={`group bg-white border-2 border-gray-200 hover:border-brand-yellow rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,214,0,0.15)] ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
+              style={{ transitionDelay: `${240 + i * 90}ms`, transition: "opacity 0.5s ease, transform 0.5s ease, border-color 0.3s ease, box-shadow 0.3s ease" }}
             >
-              <div className="w-12 h-12 rounded-xl bg-purple-600/15 text-purple-400 flex items-center justify-center mb-5 group-hover:bg-purple-600/25 group-hover:scale-110 transition-all duration-300">
+              <div className="w-14 h-14 rounded-xl bg-gray-100 group-hover:bg-brand-yellow text-brand-black flex items-center justify-center mb-5 transition-colors duration-300">
                 {s.icon}
               </div>
-              <h3 className="font-syne font-semibold text-white text-lg mb-2">{s.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed mb-4">{s.body}</p>
-              <div className="flex flex-wrap gap-2">
-                {s.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-xs text-purple-400 bg-purple-500/10 border border-purple-500/20 rounded-full px-3 py-1"
-                  >
-                    {tag}
-                  </span>
-                ))}
+              <h3 className="font-syne font-black text-brand-black text-xl mb-3">{s.title}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed mb-5">{s.body}</p>
+              <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 text-green-800 text-xs font-bold px-4 py-2 rounded-full">
+                <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+                {s.outcome}
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Mid-page CTA */}
+        <div
+          className={`mt-14 text-center transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+          style={{ transitionDelay: "620ms" }}
+        >
+          <p className="text-gray-600 text-lg font-medium mb-4">Ready to get more customers?</p>
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 bg-brand-yellow hover:bg-yellow-400 text-brand-black font-black px-8 py-4 rounded-xl text-lg shadow-md shadow-yellow-100 transition-all duration-150 hover:scale-[1.03] active:scale-[0.97]"
+          >
+            Start My Website
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
         </div>
       </div>
     </section>
