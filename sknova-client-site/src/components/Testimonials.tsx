@@ -7,42 +7,42 @@ const testimonials = [
     name: "Marcus Thompson",
     role: "Owner, Thompson HVAC",
     body: "SKNova completely transformed our online presence. Within 60 days of launch we had 3x the number of inbound calls. Worth every penny.",
-    rating: 5,
+
     initials: "MT",
   },
   {
     name: "Priya Sharma",
     role: "Founder, Bloom Beauty Studio",
     body: "I was embarrassed by my old website. Now I literally send people to it. The design is stunning and bookings went up immediately after launch.",
-    rating: 5,
+
     initials: "PS",
   },
   {
     name: "Derek Okafor",
     role: "CEO, Okafor Law Group",
     body: "Professional, fast, and communicative throughout. They delivered exactly what they promised and more. Our site now ranks on page one for our main keywords.",
-    rating: 5,
+
     initials: "DO",
   },
   {
     name: "Lisa Chen",
     role: "Owner, The Fitness Vault",
     body: "The whole process was smooth from start to finish. They understood my brand immediately. I've already referred two other business owners to SKNova.",
-    rating: 5,
+
     initials: "LC",
   },
   {
     name: "James Reyes",
     role: "Contractor, JR Roofing Co.",
     body: "I didn't think a website could make this much difference. We've gone from almost no online leads to getting 5-10 quality leads a week.",
-    rating: 5,
+
     initials: "JR",
   },
   {
     name: "Aaliyah Brooks",
     role: "Founder, Brooks Event Co.",
     body: "Absolutely obsessed with how it turned out. Premium, clean, and it sells my services better than I ever could on my own. Huge shoutout to the SKNova team.",
-    rating: 5,
+
     initials: "AB",
   },
 ];
@@ -87,7 +87,7 @@ export default function Testimonials() {
               className="bg-white/3 hover:bg-white/6 border border-white/8 hover:border-purple-500/20 rounded-2xl p-7 transition-all duration-300"
             >
               <Stars />
-              <p className="text-gray-300 text-sm leading-relaxed mb-6 italic">"{t.body}"</p>
+              <p className="text-gray-300 text-sm leading-relaxed mb-6 italic">&ldquo;{t.body}&rdquo;</p>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-purple-600/30 flex items-center justify-center text-purple-300 font-syne font-bold text-sm shrink-0">
                   {t.initials}

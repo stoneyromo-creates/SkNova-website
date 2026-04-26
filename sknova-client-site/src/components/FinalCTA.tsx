@@ -28,8 +28,8 @@ export default function FinalCTA() {
           Your Online Presence?
         </h2>
         <p className="text-gray-400 text-lg leading-relaxed mb-10">
-          Every day without a great website is a day you're losing customers to the competition.
-          Let's change that — starting today.
+          Every day without a great website is a day you&apos;re losing customers to the competition.
+          Let&apos;s change that — starting today.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

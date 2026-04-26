@@ -96,7 +96,7 @@ export default function FAQ() {
           <a href="#contact" className="text-purple-400 hover:text-purple-300 transition-colors">
             Send us a message
           </a>{" "}
-          and we'll get back to you fast.
+          and we&apos;ll get back to you fast.
         </p>
       </div>
     </section>

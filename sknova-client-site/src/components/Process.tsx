@@ -52,7 +52,7 @@ export default function Process() {
           <p className="text-purple-500 text-sm font-semibold uppercase tracking-widest mb-3">How It Works</p>
           <h2 className="font-syne font-bold text-4xl md:text-5xl text-white mb-4">Simple, Transparent Process</h2>
           <p className="text-gray-400 max-w-xl mx-auto">
-            From first call to final launch — here's exactly what working with SKNova looks like.
+            From first call to final launch — here&apos;s exactly what working with SKNova looks like.
           </p>
         </div>
 

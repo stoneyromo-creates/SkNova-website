@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { BUSINESS } from "@/lib/constants";
 
 const navLinks = [
   { label: "Services", href: "#services" },

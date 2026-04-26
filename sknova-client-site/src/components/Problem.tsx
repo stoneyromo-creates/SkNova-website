@@ -40,7 +40,7 @@ export default function Problem() {
             Sound Familiar?
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto">
-            Most small business owners struggle with the same digital problems — and it's quietly costing them thousands.
+            Most small business owners struggle with the same digital problems — and it&apos;s quietly costing them thousands.
           </p>
         </div>
 

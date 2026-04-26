@@ -69,13 +69,13 @@ export default function ContactForm() {
           <div>
             <p className="text-purple-500 text-sm font-semibold uppercase tracking-widest mb-3">Get in Touch</p>
             <h2 className="font-syne font-bold text-4xl md:text-5xl text-white leading-tight mb-6">
-              Let's Build Something{" "}
+              Let&apos;s Build Something{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">
                 Great Together
               </span>
             </h2>
             <p className="text-gray-400 leading-relaxed mb-10">
-              Fill out the form and we'll get back to you within 24 hours. No pressure, no spam —
+              Fill out the form and we&apos;ll get back to you within 24 hours. No pressure, no spam —
               just a real conversation about your project.
             </p>
 
@@ -123,7 +123,7 @@ export default function ContactForm() {
                 </div>
                 <h3 className="font-syne font-bold text-white text-xl mb-2">Message Sent!</h3>
                 <p className="text-gray-400 text-sm">
-                  Thanks for reaching out. We'll be in touch within 24 hours.
+                  Thanks for reaching out. We&apos;ll be in touch within 24 hours.
                 </p>
                 <button
                   onClick={() => setStatus("idle")}

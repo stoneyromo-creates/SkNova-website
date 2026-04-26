@@ -34,14 +34,14 @@ export default function Solution() {
               </span>
             </h2>
             <p className="text-gray-400 leading-relaxed mb-8">
-              SKNova isn't a template shop. We build custom, conversion-optimized websites
+              SKNova isn&apos;t a template shop. We build custom, conversion-optimized websites
               that reflect your brand, speak to your audience, and drive real business results.
             </p>
             <a
               href="#contact"
               className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-200 hover:shadow-[0_0_25px_rgba(168,85,247,0.4)]"
             >
-              Let's Build Together
+              Let&apos;s Build Together
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
