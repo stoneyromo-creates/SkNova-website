@@ -20,12 +20,8 @@ export const metadata: Metadata = {
     "Dallas-based web design studio building high-performance, conversion-focused websites for small businesses and entrepreneurs. Get a stunning, mobile-first website that actually grows your business.",
   keywords: ["web design", "Dallas", "small business website", "landing page", "SKNova"],
   icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon.png", type: "image/png" },
-    ],
-    apple: "/apple-icon.png",
-    shortcut: "/favicon.ico",
+    icon: { url: "/favicon-v2.png", type: "image/png" },
+    apple: { url: "/favicon-v2.png", type: "image/png" },
   },
   openGraph: {
     title: "SKNova Web Design | Premium Websites That Convert",
