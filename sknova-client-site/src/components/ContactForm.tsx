@@ -52,10 +52,10 @@ export default function ContactForm() {
   };
 
   const inputClass =
-    "w-full bg-white border border-gray-200 rounded-xl px-4 py-3.5 text-brand-black placeholder-gray-400 text-sm focus:outline-none focus:border-brand-yellow focus:shadow-[0_0_0_3px_rgba(250,204,21,0.22)] transition-all duration-200 shadow-sm";
+    "w-full bg-brand-bg border border-brand-border rounded-xl px-4 py-3.5 text-brand-text placeholder-brand-muted text-sm focus:outline-none focus:border-brand-gold focus:shadow-[0_0_0_3px_rgba(201,162,74,0.12)] transition-all duration-200";
 
   return (
-    <section id="contact" className="bg-brand-surface border-y border-gray-200 py-24 px-6">
+    <section id="contact" className="bg-brand-bg border-y border-brand-border/40 py-24 px-6">
       <div
         ref={ref}
         className={`max-w-6xl mx-auto transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
@@ -64,22 +64,20 @@ export default function ContactForm() {
           {/* Left */}
           <div>
             <p
-              className={`text-brand-red text-sm font-black uppercase tracking-widest mb-3 transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+              className={`text-brand-gold text-sm font-black uppercase tracking-widest mb-3 transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
               style={{ transitionDelay: "0ms" }}
             >
               Get in Touch
             </p>
             <h2
-              className={`font-syne font-black text-4xl md:text-5xl text-brand-black leading-tight mb-6 transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+              className={`font-syne font-black text-4xl md:text-5xl text-brand-text leading-tight mb-6 transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
               style={{ transitionDelay: "80ms" }}
             >
               Let&apos;s Get You More{" "}
-              <mark className="bg-brand-yellow text-brand-black not-italic rounded-sm px-1">
-                Customers.
-              </mark>
+              <span className="text-gold-gradient">Customers.</span>
             </h2>
             <p
-              className={`text-gray-600 leading-relaxed mb-10 transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+              className={`text-brand-muted leading-relaxed mb-10 transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
               style={{ transitionDelay: "160ms" }}
             >
               Fill out the form and we&apos;ll get back to you within 24 hours. No pressure, no spam —
@@ -91,26 +89,26 @@ export default function ContactForm() {
               style={{ transitionDelay: "240ms" }}
             >
               <a href={`tel:${BUSINESS.phone}`} className="flex items-center gap-4 group">
-                <div className="w-12 h-12 rounded-xl bg-brand-yellow/20 flex items-center justify-center text-brand-black group-hover:bg-brand-yellow transition-colors shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-brand-card border border-brand-border flex items-center justify-center text-brand-muted group-hover:border-brand-gold/30 group-hover:text-brand-gold transition-all duration-200 shrink-0">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
                 <div>
-                  <p className="text-gray-500 text-xs uppercase tracking-wider">Phone</p>
-                  <p className="text-brand-black font-bold">{BUSINESS.phone}</p>
+                  <p className="text-brand-muted text-xs uppercase tracking-wider mb-0.5">Phone</p>
+                  <p className="text-brand-text font-bold">{BUSINESS.phone}</p>
                 </div>
               </a>
 
               <a href={`mailto:${BUSINESS.email}`} className="flex items-center gap-4 group">
-                <div className="w-12 h-12 rounded-xl bg-brand-yellow/20 flex items-center justify-center text-brand-black group-hover:bg-brand-yellow transition-colors shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-brand-card border border-brand-border flex items-center justify-center text-brand-muted group-hover:border-brand-gold/30 group-hover:text-brand-gold transition-all duration-200 shrink-0">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
                 <div>
-                  <p className="text-gray-500 text-xs uppercase tracking-wider">Email</p>
-                  <p className="text-brand-black font-bold">{BUSINESS.email}</p>
+                  <p className="text-brand-muted text-xs uppercase tracking-wider mb-0.5">Email</p>
+                  <p className="text-brand-text font-bold">{BUSINESS.email}</p>
                 </div>
               </a>
             </div>
@@ -118,23 +116,23 @@ export default function ContactForm() {
 
           {/* Right — Form */}
           <div
-            className={`bg-white border border-gray-200 rounded-2xl p-8 shadow-sm transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+            className={`bg-brand-card border border-brand-border rounded-2xl p-8 shadow-[0_8px_40px_rgba(0,0,0,0.4)] transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
             style={{ transitionDelay: "200ms" }}
           >
             {status === "success" ? (
               <div className="text-center py-12">
-                <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-16 h-16 rounded-full bg-brand-gold/15 border border-brand-gold/25 flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="font-syne font-black text-brand-black text-xl mb-2">Message Sent!</h3>
-                <p className="text-gray-500 text-sm">
+                <h3 className="font-syne font-black text-brand-text text-xl mb-2">Message Sent!</h3>
+                <p className="text-brand-muted text-sm">
                   Thanks for reaching out. We&apos;ll be in touch within 24 hours.
                 </p>
                 <button
                   onClick={() => setStatus("idle")}
-                  className="mt-6 text-brand-black font-bold underline underline-offset-2 decoration-brand-yellow decoration-2 hover:text-brand-red text-sm transition-colors"
+                  className="mt-6 text-brand-gold hover:text-brand-gold-light font-semibold text-sm transition-colors"
                 >
                   Send another message
                 </button>
@@ -143,7 +141,7 @@ export default function ContactForm() {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-gray-600 text-xs font-bold mb-1.5 uppercase tracking-wider">Name *</label>
+                    <label className="block text-brand-muted text-xs font-bold mb-1.5 uppercase tracking-wider">Name *</label>
                     <input
                       type="text"
                       name="name"
@@ -155,7 +153,7 @@ export default function ContactForm() {
                     />
                   </div>
                   <div>
-                    <label className="block text-gray-600 text-xs font-bold mb-1.5 uppercase tracking-wider">Email *</label>
+                    <label className="block text-brand-muted text-xs font-bold mb-1.5 uppercase tracking-wider">Email *</label>
                     <input
                       type="email"
                       name="email"
@@ -170,7 +168,7 @@ export default function ContactForm() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-gray-600 text-xs font-bold mb-1.5 uppercase tracking-wider">Phone</label>
+                    <label className="block text-brand-muted text-xs font-bold mb-1.5 uppercase tracking-wider">Phone</label>
                     <input
                       type="tel"
                       name="phone"
@@ -181,23 +179,23 @@ export default function ContactForm() {
                     />
                   </div>
                   <div>
-                    <label className="block text-gray-600 text-xs font-bold mb-1.5 uppercase tracking-wider">Service</label>
+                    <label className="block text-brand-muted text-xs font-bold mb-1.5 uppercase tracking-wider">Service</label>
                     <select
                       name="service"
                       value={form.service}
                       onChange={handleChange}
                       className={`${inputClass} appearance-none cursor-pointer`}
                     >
-                      <option value="">Select a service</option>
+                      <option value="" className="bg-brand-section">Select a service</option>
                       {services.map((s) => (
-                        <option key={s} value={s}>{s}</option>
+                        <option key={s} value={s} className="bg-brand-section">{s}</option>
                       ))}
                     </select>
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-gray-600 text-xs font-bold mb-1.5 uppercase tracking-wider">Message *</label>
+                  <label className="block text-brand-muted text-xs font-bold mb-1.5 uppercase tracking-wider">Message *</label>
                   <textarea
                     name="message"
                     value={form.message}
@@ -210,7 +208,7 @@ export default function ContactForm() {
                 </div>
 
                 {status === "error" && (
-                  <p className="text-red-600 text-sm bg-red-50 border border-red-200 rounded-lg px-4 py-3">
+                  <p className="text-brand-red text-sm bg-brand-red/10 border border-brand-red/20 rounded-lg px-4 py-3">
                     {errorMsg}
                   </p>
                 )}
@@ -218,7 +216,7 @@ export default function ContactForm() {
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="btn-yellow-gradient w-full disabled:opacity-60 disabled:cursor-not-allowed text-brand-black font-black py-4 rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-transform duration-150 flex items-center justify-center gap-2 text-base"
+                  className="btn-gold w-full disabled:opacity-50 disabled:cursor-not-allowed font-black py-4 rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-transform duration-150 flex items-center justify-center gap-2 text-base"
                 >
                   {status === "loading" ? (
                     <>

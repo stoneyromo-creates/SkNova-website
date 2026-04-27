@@ -10,14 +10,16 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          yellow: "#FACC15",
-          "yellow-dark": "#EAB308",
-          amber: "#D97706",
+          bg: "#0B0B0C",
+          section: "#111113",
+          card: "#161618",
+          gold: "#C9A24A",
+          "gold-light": "#E5C76B",
+          "gold-dark": "#B8963D",
+          text: "#F5F5F5",
+          muted: "#A1A1AA",
+          border: "#2A2A2E",
           red: "#FF3B3B",
-          black: "#0A0A0A",
-          dark: "#1C1C1E",
-          purple: "#7C3AED",
-          surface: "#F8F9FB",
         },
       },
       fontFamily: {

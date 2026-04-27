@@ -6,29 +6,33 @@ export default function FinalCTA() {
   const { ref, inView } = useInView();
 
   return (
-    <section
-      className="py-24 px-6"
-      style={{ background: "linear-gradient(135deg, #FACC15 0%, #EAB308 55%, #D97706 100%)" }}
-    >
-      <div ref={ref} className="max-w-3xl mx-auto text-center">
+    <section className="relative bg-brand-section py-28 px-6 overflow-hidden">
+      {/* Radial gold glow */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(201,162,74,0.08) 0%, transparent 70%)",
+        }}
+      />
+
+      <div ref={ref} className="relative max-w-3xl mx-auto text-center">
         <p
-          className={`text-brand-black/50 text-sm font-black uppercase tracking-widest mb-4 transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+          className={`text-brand-gold text-sm font-black uppercase tracking-widest mb-4 transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
           style={{ transitionDelay: "0ms" }}
         >
           Don&apos;t Wait
         </p>
 
         <h2
-          className={`font-syne font-black text-4xl md:text-6xl text-brand-black leading-tight mb-6 transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+          className={`font-syne font-black text-4xl md:text-6xl text-brand-text leading-tight mb-6 transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
           style={{ transitionDelay: "80ms" }}
         >
-          Every Day Without a
-          <br />
-          Good Website Costs You.
+          Every Day Without a Good Website{" "}
+          <span className="text-gold-gradient">Costs You.</span>
         </h2>
 
         <p
-          className={`text-brand-black/65 text-lg leading-relaxed mb-10 transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+          className={`text-brand-muted text-lg leading-relaxed mb-10 transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
           style={{ transitionDelay: "160ms" }}
         >
           Your competitors are online and converting. Let&apos;s get you a site that works — fast.
@@ -40,7 +44,7 @@ export default function FinalCTA() {
         >
           <a
             href="#contact"
-            className="inline-flex items-center justify-center gap-2 bg-brand-black hover:bg-gray-800 text-white font-black px-10 py-4 rounded-xl text-lg transition-all duration-150 hover:scale-[1.03] active:scale-[0.97] shadow-lg shadow-black/20"
+            className="btn-gold inline-flex items-center justify-center gap-2 font-black px-10 py-4 rounded-xl text-lg hover:scale-[1.03] active:scale-[0.97] transition-transform duration-150"
           >
             Start My Website
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -49,7 +53,7 @@ export default function FinalCTA() {
           </a>
           <a
             href="#pricing"
-            className="inline-flex items-center justify-center gap-2 bg-white/40 hover:bg-white/65 border border-brand-black/15 text-brand-black font-black px-10 py-4 rounded-xl text-lg transition-all duration-150 hover:scale-[1.03] active:scale-[0.97]"
+            className="inline-flex items-center justify-center gap-2 bg-transparent border border-brand-border text-brand-muted hover:border-brand-gold/30 hover:text-brand-text font-bold px-10 py-4 rounded-xl text-lg transition-all duration-200 hover:scale-[1.03] active:scale-[0.97]"
           >
             See Pricing
           </a>

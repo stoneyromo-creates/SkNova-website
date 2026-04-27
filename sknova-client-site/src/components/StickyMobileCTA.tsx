@@ -14,10 +14,10 @@ export default function StickyMobileCTA() {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-0 inset-x-0 z-50 md:hidden p-3 bg-white border-t border-gray-200 shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
+    <div className="fixed bottom-0 inset-x-0 z-50 md:hidden p-3 bg-brand-section border-t border-brand-border shadow-[0_-8px_30px_rgba(0,0,0,0.5)]">
       <a
         href="#contact"
-        className="btn-yellow-gradient flex items-center justify-center gap-2 w-full text-brand-black font-black text-base py-4 rounded-xl active:scale-[0.98] transition-transform duration-150"
+        className="btn-gold flex items-center justify-center gap-2 w-full font-black text-base py-4 rounded-xl active:scale-[0.98] transition-transform duration-150"
       >
         Get My Website Built
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

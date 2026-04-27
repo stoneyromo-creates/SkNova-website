@@ -23,28 +23,29 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 inset-x-0 z-50">
       {/* Announcement bar */}
-      <div
-        className="text-brand-black text-center text-sm font-bold py-2.5 px-4 tracking-wide"
-        style={{ background: "linear-gradient(135deg, #FACC15, #EAB308)" }}
-      >
-        ⭐ Dallas-Based &nbsp;·&nbsp; Fast Turnaround &nbsp;·&nbsp; Limited Spots Available
+      <div className="bg-brand-bg border-b border-brand-gold/10 text-center py-2 px-4">
+        <p className="text-brand-muted text-xs tracking-[0.18em] uppercase">
+          <span className="text-brand-gold mr-3">✦</span>
+          Dallas-Based &nbsp;·&nbsp; Fast Turnaround &nbsp;·&nbsp; Limited Spots Available
+          <span className="text-brand-gold ml-3">✦</span>
+        </p>
       </div>
 
       {/* Main nav */}
-      <div className={`bg-white transition-all duration-300 ${scrolled ? "shadow-md" : "border-b border-gray-100"}`}>
-        <div className="max-w-7xl mx-auto px-6 py-3.5 flex items-center justify-between">
+      <div className={`bg-brand-bg/95 backdrop-blur-md transition-all duration-300 ${scrolled ? "border-b border-brand-gold/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)]" : "border-b border-brand-border/40"}`}>
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="font-syne font-black text-2xl text-brand-black tracking-tight">
-            SK<span className="bg-brand-yellow px-1 rounded-sm">Nova</span>
+          <a href="#" className="font-syne font-black text-2xl text-brand-text tracking-tight">
+            SK<span className="text-gold-gradient">Nova</span>
           </a>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-7">
+          <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
-                className="text-sm font-semibold text-gray-600 hover:text-brand-purple transition-colors duration-150"
+                className="text-sm font-medium text-brand-muted hover:text-brand-text transition-colors duration-150 tracking-wide"
               >
                 {l.label}
               </a>
@@ -52,16 +53,16 @@ export default function Navbar() {
           </nav>
 
           {/* Right: phone + CTA */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-5">
             <a
               href={`tel:${BUSINESS.phone}`}
-              className="text-sm font-semibold text-gray-500 hover:text-brand-black transition-colors"
+              className="text-sm font-medium text-brand-muted hover:text-brand-gold transition-colors"
             >
               {BUSINESS.phone}
             </a>
             <a
               href="#contact"
-              className="bg-brand-black text-white font-bold text-sm px-5 py-2.5 rounded-lg hover:bg-gray-800 transition-all duration-150 hover:scale-[1.03] active:scale-[0.97] shadow-sm"
+              className="btn-gold-outline font-bold text-sm px-5 py-2.5 rounded-lg hover:scale-[1.03] active:scale-[0.97] transition-transform duration-150"
             >
               Book a Call
             </a>
@@ -69,7 +70,7 @@ export default function Navbar() {
 
           {/* Mobile toggle */}
           <button
-            className="md:hidden text-brand-black p-1"
+            className="md:hidden text-brand-muted hover:text-brand-text p-1 transition-colors"
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
           >
@@ -85,13 +86,13 @@ export default function Navbar() {
 
         {/* Mobile menu */}
         {open && (
-          <div className="md:hidden border-t border-gray-100 bg-white px-6 py-5 flex flex-col gap-4">
+          <div className="md:hidden border-t border-brand-border bg-brand-section px-6 py-5 flex flex-col gap-4">
             {navLinks.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="text-sm font-semibold text-gray-700 hover:text-brand-black py-1"
+                className="text-sm font-medium text-brand-muted hover:text-brand-text py-1 transition-colors tracking-wide"
               >
                 {l.label}
               </a>
@@ -99,15 +100,15 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="btn-yellow-gradient text-brand-black font-black text-center py-3.5 rounded-xl text-base mt-1 transition-transform duration-150 active:scale-[0.98]"
+              className="btn-gold text-center font-black py-3.5 rounded-xl text-base mt-1 hover:scale-[1.01] active:scale-[0.98] transition-transform duration-150"
             >
               Book a Call
             </a>
             <a
               href={`tel:${BUSINESS.phone}`}
-              className="text-center text-sm font-semibold text-gray-500"
+              className="text-center text-sm font-medium text-brand-muted"
             >
-              Call us: {BUSINESS.phone}
+              {BUSINESS.phone}
             </a>
           </div>
         )}
