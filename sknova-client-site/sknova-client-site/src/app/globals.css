@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0B0B0C;
+  color: #F5F5F5;
+}
+
+/* Subtle grain overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@layer components {
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #C9A24A 0%, #E5C76B 45%, #C9A24A 75%, #B8963D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Filled gold — for primary mobile CTA, Pricing highlight */
+  .btn-gold {
+    background: linear-gradient(135deg, #C9A24A, #B8963D);
+    color: #0B0B0C;
+    box-shadow: 0 4px 16px rgba(201, 162, 74, 0.20);
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+  }
+  .btn-gold:hover {
+    background: linear-gradient(135deg, #E5C76B, #C9A24A);
+    box-shadow: 0 6px 28px rgba(201, 162, 74, 0.32);
+  }
+
+  /* Outline gold — dark bg, gold border/text, fills on hover */
+  .btn-gold-outline {
+    background: transparent;
+    border: 1px solid rgba(201, 162, 74, 0.40);
+    color: #C9A24A;
+    transition: background 0.2s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.2s ease;
+  }
+  .btn-gold-outline:hover {
+    background: linear-gradient(135deg, #C9A24A, #B8963D);
+    color: #0B0B0C;
+    border-color: transparent;
+    box-shadow: 0 4px 24px rgba(201, 162, 74, 0.28);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
